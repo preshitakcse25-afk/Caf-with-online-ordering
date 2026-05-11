@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order | Brew & Bean Café</title>
+    <!--link rel="stylesheet" href="style.css"-->
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Brew & Bean</div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a class="active" href="order.html">Order</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="page-header">
+        <h1>Build Your Coffee Order</h1>
+        <p>Select coffee, add-ons, quantity, and check your total price.</p>
+    </section>
+
+    <section class="section order-section">
+
+        <div class="order-container">
+
+            <form class="order-form">
+
+                <label for="coffee">Choose Coffee</label>
+                <select id="coffee">
+                    <option value="espresso">Espresso - ₹80</option>
+                    <option value="cappuccino">Cappuccino - ₹120</option>
+                    <option value="latte">Latte - ₹140</option>
+                    <option value="mocha">Mocha - ₹160</option>
+                    <option value="coldCoffee">Cold Coffee - ₹150</option>
+                    <option value="blackCoffee">Black Coffee - ₹70</option>
+                </select>
+
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" value="1" min="1">
+
+                <h3>Add-ons</h3>
+
+                <label class="checkbox-label">
+                    <input type="checkbox" class="addon" value="extraMilk">
+                    Extra Milk - ₹20
+                </label>
+
+                <label class="checkbox-label">
+                    <input type="checkbox" class="addon" value="chocolate">
+                    Chocolate Syrup - ₹30
+                </label>
+
+                <label class="checkbox-label">
+                    <input type="checkbox" class="addon" value="cream">
+                    Whipped Cream - ₹25
+                </label>
+
+                <label class="checkbox-label">
+                    <input type="checkbox" class="addon" value="caramel">
+                    Caramel - ₹35
+                </label>
+
+            </form>
+
+            <div class="summary-box">
+                <h3>Order Summary</h3>
+
+                <p><strong>Coffee:</strong> <span id="summaryCoffee">Espresso</span></p>
+                <p><strong>Quantity:</strong> <span id="summaryQuantity">1</span></p>
+                <p><strong>Add-ons:</strong> <span id="summaryAddons">None</span></p>
+
+                <hr>
+
+                <h2>Total: ₹<span id="totalPrice">80</span></h2>
+
+                <button type="button" class="place-btn" onclick="placeOrder()">
+                    Place Order
+                </button>
+
+                <p id="message"></p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Brew & Bean Café. All Rights Reserved.</p>
+    </footer>
+
+    <!--script src="script.js"></script-->
+</body>
+</html>
