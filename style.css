@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f1e7;
+    color: #3b2415;
+}
+
+/* Navigation Bar */
+.navbar {
+    background: #4b2e1e;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background: #c47a3a;
+}
+
+/* Home Hero */
+.hero {
+    height: 85vh;
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    background: #c47a3a;
+    color: white;
+    padding: 12px 28px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #9b5d27;
+}
+
+/* Page Header */
+.page-header {
+    background: #f1dfc8;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.page-header h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    font-size: 18px;
+}
+
+/* Common Section */
+.section {
+    padding: 60px 50px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+/* Feature and Menu Cards */
+.feature-box,
+.menu-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card,
+.contact-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.card h3,
+.contact-card h3 {
+    margin-bottom: 12px;
+    color: #7a3e16;
+}
+
+.card span {
+    display: inline-block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #9b5d27;
+    font-size: 20px;
+}
+
+/* Order Page */
+.order-section {
+    background: #fff7ed;
+}
+
+.order-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    text-align: left;
+}
+
+.order-form,
+.summary-box {
+    background: white;
+    width: 370px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.order-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.order-form select,
+.order-form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.order-form h3 {
+    margin-top: 20px;
+    color: #7a3e16;
+}
+
+.checkbox-label {
+    font-weight: normal !important;
+}
+
+.summary-box p {
+    margin: 15px 0;
+}
+
+.summary-box h2 {
+    color: #7a3e16;
+    margin-top: 20px;
+}
+
+.place-btn {
+    width: 100%;
+    padding: 12px;
+    background: #4b2e1e;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.place-btn:hover {
+    background: #7a3e16;
+}
+
+#message {
+    margin-top: 15px;
+    color: green;
+    font-weight: bold;
+}
+
+/* Contact Page */
+.contact-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* Footer */
+footer {
+    background: #4b2e1e;
+    color: white;
+    text-align: center;
+    padding: 18px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .feature-box,
+    .menu-box,
+    .contact-box {
+        grid-template-columns: 1fr;
+    }
+
+    .order-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .order-form,
+    .summary-box {
+        width: 90%;
+    }
+}
